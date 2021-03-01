@@ -23,9 +23,7 @@ export type User = {
 };
 
 export type UsersApiResponse = {
-  data: {
-    results: Array<User>;
-  };
+  data: Array<User>;
 };
 
 export type UserState = {

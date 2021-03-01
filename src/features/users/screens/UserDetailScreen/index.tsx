@@ -17,6 +17,8 @@ import CloseIcon from 'assets/icon-close.svg';
 import { styles } from './styles';
 import colors from 'utils/colors';
 
+export const WEBVIEW_MODAL_TEST_ID = 'user-website-webview-modal';
+
 export default (props: UsersStackNavProps<'UserDetailScreen'>) => {
   const { route } = props;
 
@@ -40,6 +42,7 @@ export default (props: UsersStackNavProps<'UserDetailScreen'>) => {
   };
 
   const handlePhonePress = () => {
+    // Remove all dashes, spaces, parantheses, periods etc
     let phone = user.phone.replace(/[- )(.x]/g, '');
 
     if (Platform.OS === 'android') {
@@ -118,9 +121,7 @@ export default (props: UsersStackNavProps<'UserDetailScreen'>) => {
           </View>
         </ScrollView>
         <Modal isVisible={isModalVisible}>
-          <View
-            style={styles.webViewHeader}
-            testID="user-website-webview-modal">
+          <View style={styles.webViewHeader} testID={WEBVIEW_MODAL_TEST_ID}>
             <TouchableOpacity
               onPress={handleToggleModal}
               style={styles.closeIcon}>

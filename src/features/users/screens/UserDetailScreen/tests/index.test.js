@@ -2,7 +2,7 @@ import React from 'react';
 import { Linking } from 'react-native';
 import { fireEvent, render } from '@testing-library/react-native';
 
-import UserDetailScreen from '../index';
+import UserDetailScreen, { WEBVIEW_MODAL_TEST_ID } from '../index';
 
 jest.mock('react-native/Libraries/Linking/Linking', () => ({
   openURL: jest.fn(),
@@ -42,13 +42,14 @@ const defaultProps = {
 
 const renderComponent = () => render(<UserDetailScreen {...defaultProps} />);
 
+// TODO: iOS vs. Android cases
 describe('UserDetailScreen', () => {
   // Reset Linking mock after each test run to clear out previous params
   afterEach(() => {
     Linking.openURL = jest.fn();
   });
 
-  it('should execute Linking openUrl on the address press', () => {
+  it('should execute Linking openUrl with the proper param on the address press', () => {
     const coordinates = `${user.address.geo.lat},${user.address.geo.lng}`;
     const { getByText } = renderComponent();
 
@@ -58,7 +59,7 @@ describe('UserDetailScreen', () => {
     );
   });
 
-  it('should execute Linking openUrl on the phone number press', () => {
+  it('should execute Linking openUrl with the proper param on the phone number press', () => {
     const { getByText } = renderComponent();
 
     fireEvent.press(getByText(user.phone));
@@ -67,10 +68,10 @@ describe('UserDetailScreen', () => {
     );
   });
 
-  it("should open the user's website in the webview modal ", () => {
+  it("should open the user's website in the webview modal on web link press", () => {
     const { getByTestId, getByText } = renderComponent();
 
     fireEvent.press(getByText(user.website));
-    expect(getByTestId('user-website-webview-modal')).toBeDefined();
+    expect(getByTestId(WEBVIEW_MODAL_TEST_ID)).toBeDefined();
   });
 });

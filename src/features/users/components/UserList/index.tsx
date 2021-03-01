@@ -15,5 +15,11 @@ export default (props: Props) => {
     return <UserCard user={item} />;
   };
 
-  return <FlatList data={users} renderItem={renderItem} />;
+  return (
+    <FlatList
+      data={users}
+      keyExtractor={(item) => item.name}
+      renderItem={renderItem}
+    />
+  );
 };

@@ -1,7 +1,7 @@
 import React from 'react';
 import { fireEvent, render } from '@testing-library/react-native';
 
-import UserCard from '../index';
+import UserCard, { USER_CARD_TEST_ID } from '../index';
 import * as RootNavigation from 'utils/navigation';
 
 jest.mock('utils/navigation');
@@ -42,7 +42,7 @@ describe('UserCard', () => {
   it('should navigate to the detail screen if the card is pressed', () => {
     const { getByTestId } = renderComponent();
 
-    fireEvent.press(getByTestId('user-card'));
+    fireEvent.press(getByTestId(USER_CARD_TEST_ID));
     expect(RootNavigation.navigate).toHaveBeenCalledWith('UserDetailScreen', {
       user: defaultProps.user,
     });

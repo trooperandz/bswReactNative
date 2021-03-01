@@ -7,6 +7,8 @@ import { styles } from './styles';
 import { User } from 'features/users/usersSlice/types';
 import colors from 'utils/colors';
 
+export const USER_CARD_TEST_ID = 'user-card';
+
 type Props = {
   user: User;
 };
@@ -16,10 +18,9 @@ export default (props: Props) => {
 
   return (
     <TouchableOpacity
-      key={user.name}
       style={styles.card}
       onPress={() => RootNavigation.navigate('UserDetailScreen', { user })}
-      testID="user-card">
+      testID={USER_CARD_TEST_ID}>
       <View>
         <Icon name="person" width={24} height={24} fill={colors.primary} />
       </View>

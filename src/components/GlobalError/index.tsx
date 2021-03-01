@@ -9,6 +9,9 @@ import * as S from './styles';
 
 const { styles } = S;
 
+export const ERROR_MODAL_TEST_ID = 'error-modal';
+
+// Sets at root of app; will render error modal on any screen if global error is dispatched
 export default () => {
   const error = useSelector((state: AppSliceState) => state.app.error);
   const dispatch = useDispatch();
@@ -21,7 +24,7 @@ export default () => {
 
   return (
     <Modal animationType="slide" transparent={true}>
-      <S.Container testID="error-modal">
+      <S.Container testID={ERROR_MODAL_TEST_ID}>
         <S.Alert style={styles.alert}>
           <S.AlertText>{error}</S.AlertText>
           <Button type="primary" onPress={handleClose} style={styles.button}>

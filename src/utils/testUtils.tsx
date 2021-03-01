@@ -11,13 +11,13 @@ const initialState = {
   users: { users: [] },
 };
 
+// Use with any component tests that require redux Provider and store
 export const renderWithProvider = (
   children: JSX.Element,
   state: { [key: string]: any },
   store?: any,
 ) => {
   const testStore = { ...initialState, ...state };
-  // const store = store || mockStore(testStore);
 
   return render(
     <Provider store={store || mockStore(testStore)}>{children}</Provider>,

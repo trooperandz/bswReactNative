@@ -3,11 +3,11 @@ import React from 'react';
 import { SafeAreaView, StyleSheet } from 'react-native';
 import { Provider } from 'react-redux';
 
-import { RootNavigation } from '../navigations';
+import { RootNavigation } from 'navigations';
 import store from './store';
-import GlobalError from '../components/GlobalError';
+import GlobalError from 'components/GlobalError';
 
-const App = () => {
+export default () => {
   return (
     <Provider store={store}>
       <SafeAreaView style={styles.safeView}>
@@ -23,5 +23,3 @@ const styles = StyleSheet.create({
     flex: 1,
   },
 });
-
-export default App;
