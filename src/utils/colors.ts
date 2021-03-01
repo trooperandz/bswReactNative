@@ -1,4 +1,4 @@
-// Material design inspired color names for app's theme
+// Material design inspired color theme names
 export default {
   primary: '#0071e9',
   backgroundPrimary: '#f4f4f9',

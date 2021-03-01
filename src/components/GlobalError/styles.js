@@ -1,6 +1,8 @@
 import styled from 'styled-components/native';
 import { StyleSheet } from 'react-native';
 
+import colors from 'utils/colors';
+
 export const Container = styled.View`
   flex: 1;
   align-items: center;
@@ -13,7 +15,7 @@ export const Alert = styled.View`
   width: 60%;
   padding: 18px;
   border-radius: 20px;
-  background-color: #fff;
+  background-color: ${colors.surfacePrimary};
 `;
 
 export const AlertText = styled.Text`

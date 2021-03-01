@@ -1,12 +1,18 @@
 import React from 'react';
-import { Text } from 'react-native';
+import { Text, StyleSheet } from 'react-native';
 
-import { CenterView } from 'styles';
+import CenterView from 'components/CenterView';
 
 export default () => {
   return (
     <CenterView>
-      <Text>Metrics Screen</Text>
+      <Text style={styles.text}>Metrics Screen</Text>
     </CenterView>
   );
 };
+
+const styles = StyleSheet.create({
+  text: {
+    fontSize: 24,
+  },
+});

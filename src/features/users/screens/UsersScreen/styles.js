@@ -7,4 +7,7 @@ export const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: colors.backgroundPrimary,
   },
+  loadingText: {
+    fontSize: 18,
+  },
 });

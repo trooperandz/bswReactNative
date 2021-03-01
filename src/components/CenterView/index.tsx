@@ -1,6 +1,8 @@
 import React, { ReactChild } from 'react';
 import { View, StyleSheet } from 'react-native';
 
+import colors from 'utils/colors';
+
 type Props = {
   children: ReactChild;
   testID?: string;
@@ -17,5 +19,6 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
+    backgroundColor: colors.backgroundPrimary,
   },
 });

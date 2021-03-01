@@ -27,7 +27,7 @@ export default () => {
           <UserList users={users} />
         ) : (
           <CenterView testID={LOADING_TEST_ID}>
-            <Text>Loading...</Text>
+            <Text style={styles.loadingText}>Loading...</Text>
           </CenterView>
         )}
       </View>
