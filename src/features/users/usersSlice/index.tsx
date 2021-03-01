@@ -31,6 +31,7 @@ export const getUsers = (callback?: () => void) => {
       }
 
       dispatch(setUsers(response.data));
+      callback && callback();
     } catch (error) {
       dispatch(setGlobalError(error.message));
       callback && callback();

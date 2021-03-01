@@ -128,6 +128,8 @@ export default (props: UsersStackNavProps<'UserDetailScreen'>) => {
               <CloseIcon width={32} height={32} />
             </TouchableOpacity>
           </View>
+
+          {/* cannot use actual user data here because they are bad links */}
           <WebView
             source={{ uri: 'https://reactnative.dev/docs/getting-started' }}
           />

@@ -1,9 +1,9 @@
 package com.bswChallenge;
 
-import com.facebook.react.ReactActivity;
 // react-native-splash-screen >= 0.3.1
 import org.devio.rn.splashscreen.SplashScreen;
 import android.os.Bundle;
+import com.facebook.react.ReactActivity;
 
 public class MainActivity extends ReactActivity {
   @Override
