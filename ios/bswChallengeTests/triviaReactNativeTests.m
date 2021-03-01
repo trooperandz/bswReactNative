@@ -7,11 +7,11 @@
 #define TIMEOUT_SECONDS 600
 #define TEXT_TO_LOOK_FOR @"Welcome to React"
 
-@interface triviaReactNativeTests : XCTestCase
+@interface bswChallengeTests : XCTestCase
 
 @end
 
-@implementation triviaReactNativeTests
+@implementation bswChallengeTests
 
 - (BOOL)findSubviewInView:(UIView *)view matching:(BOOL(^)(UIView *view))test
 {

@@ -44,8 +44,8 @@ def flipper_post_install(installer)
   end
 end
 
-target 'triviaReactNative' do
-  # Pods for triviaReactNative
+target 'bswChallenge' do
+  # Pods for bswChallenge
   pod 'FBLazyVector', :path => "../node_modules/react-native/Libraries/FBLazyVector"
   pod 'FBReactNativeSpec', :path => "../node_modules/react-native/Libraries/FBReactNativeSpec"
   pod 'RCTRequired', :path => "../node_modules/react-native/Libraries/RCTRequired"
@@ -76,8 +76,9 @@ target 'triviaReactNative' do
   pod 'DoubleConversion', :podspec => '../node_modules/react-native/third-party-podspecs/DoubleConversion.podspec'
   pod 'glog', :podspec => '../node_modules/react-native/third-party-podspecs/glog.podspec'
   pod 'Folly', :podspec => '../node_modules/react-native/third-party-podspecs/Folly.podspec'
+  pod 'OpenSSL-Universal', '~>1.0.2.20'
 
-  target 'triviaReactNativeTests' do
+  target 'bswChallengeTests' do
     inherit! :complete
     # Pods for testing
   end
@@ -94,10 +95,10 @@ target 'triviaReactNative' do
   end
 end
 
-target 'triviaReactNative-tvOS' do
-  # Pods for triviaReactNative-tvOS
+target 'bswChallenge-tvOS' do
+  # Pods for bswChallenge-tvOS
 
-  target 'triviaReactNative-tvOSTests' do
+  target 'bswChallenge-tvOSTests' do
     inherit! :search_paths
     # Pods for testing
   end
