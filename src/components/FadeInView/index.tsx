@@ -7,8 +7,8 @@ type Props = {
   style?: { [key: string]: any };
 };
 
-export const FadeInView = (props: Props) => {
-  const { children, duration = 400, style } = props;
+export default (props: Props) => {
+  const { children, duration = 500, style } = props;
   const fadeAnim = useRef(new Animated.Value(0)).current;
 
   useEffect(() => {

@@ -1,9 +1,10 @@
 import React, { useEffect } from 'react';
-import { View, Text } from 'react-native';
+import { Text } from 'react-native';
 import { useSelector, useDispatch } from 'react-redux';
 import SplashScreen from 'react-native-splash-screen';
 
 import SafeAreaView from 'components/SafeAreaView';
+import FadeInView from 'components/FadeInView';
 import UserList from 'features/users/components/UserList';
 import CenterView from 'components/CenterView';
 import { getUsers } from 'features/users/usersSlice';
@@ -24,7 +25,7 @@ export default () => {
   return (
     <>
       <SafeAreaView>
-        <View style={styles.container}>
+        <FadeInView style={styles.container}>
           {users.length ? (
             <UserList users={users} />
           ) : (
@@ -32,7 +33,7 @@ export default () => {
               <Text style={styles.loadingText}>Loading...</Text>
             </CenterView>
           )}
-        </View>
+        </FadeInView>
       </SafeAreaView>
     </>
   );

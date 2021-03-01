@@ -130,9 +130,7 @@ export default (props: UsersStackNavProps<'UserDetailScreen'>) => {
           </View>
 
           {/* cannot use actual user data here because they are bad links */}
-          <WebView
-            source={{ uri: 'https://reactnative.dev/docs/getting-started' }}
-          />
+          <WebView source={{ uri: 'https://www.bswhealth.com' }} />
         </Modal>
       </>
     </SafeAreaView>
