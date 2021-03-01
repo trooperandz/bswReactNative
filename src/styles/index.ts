@@ -28,3 +28,10 @@ export const Heading = styled.Text`
   padding: 0 0 24px;
   color: gray;
 `;
+
+export const CenterView = styled.View`
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+`;

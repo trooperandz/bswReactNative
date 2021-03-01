@@ -7,29 +7,8 @@ import configureStore from 'redux-mock-store';
 const mockStore = configureStore([thunk]);
 
 const initialState = {
-  app: {},
-  questions: {
-    questions: [
-      {
-        category: 'General',
-        type: 'boolean',
-        difficulty: 'easy',
-        question: 'question 1',
-        correct_answer: 'D',
-        incorrect_answers: ['A', 'B', 'C'],
-        selected_answer: 'A',
-      },
-      {
-        category: 'Geography',
-        type: 'boolean',
-        difficulty: 'medium',
-        question: 'question 2',
-        correct_answer: 'H',
-        incorrect_answers: ['E', 'F', 'G'],
-        selected_answer: 'H',
-      },
-    ],
-  },
+  app: { error: '' },
+  users: { users: [] },
 };
 
 export const renderWithProvider = (

@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from 'react-redux';
 
 import { Button } from 'components/Button';
 import { setGlobalError } from 'features/app/appSlice';
-import { AppSliceState } from 'features/app/types';
+import { AppSliceState } from 'features/app/appSlice/types';
 import * as S from './styles';
 
 const { styles } = S;

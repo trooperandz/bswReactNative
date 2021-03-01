@@ -1,7 +1,6 @@
 export type RootStackParamList = {
-  Home: undefined; // no params
-  Questions: undefined;
-  Results: undefined;
+  UsersScreen: undefined; // no params
+  UserDetailScreen: undefined;
 };
 
 export type HomeStackParamList = {};

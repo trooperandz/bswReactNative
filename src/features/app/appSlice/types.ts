@@ -1,6 +1,7 @@
+export type AppState = {
+  error: string;
+};
+
 export type AppSliceState = {
-  app: {
-    error: string;
-    userName: string;
-  };
+  app: AppState;
 };

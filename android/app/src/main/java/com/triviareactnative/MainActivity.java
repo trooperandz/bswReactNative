@@ -1,4 +1,4 @@
-package com.triviareactnative;
+package com.bswChallenge;
 
 import com.facebook.react.ReactActivity;
 // react-native-splash-screen >= 0.3.1
@@ -18,6 +18,6 @@ public class MainActivity extends ReactActivity {
    */
   @Override
   protected String getMainComponentName() {
-    return "triviaReactNative";
+    return "bswChallenge";
   }
 }

@@ -1,4 +1,4 @@
-package com.triviareactnative;
+package com.bswChallenge;
 
 import android.content.Intent;
 import android.os.Bundle;
