@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { View, Text } from 'react-native';
 import { useSelector, useDispatch } from 'react-redux';
+import SplashScreen from 'react-native-splash-screen';
 
 import SafeAreaView from 'components/SafeAreaView';
 import UserList from 'features/users/components/UserList';
@@ -17,20 +18,22 @@ export default () => {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(getUsers());
+    dispatch(getUsers(() => SplashScreen.hide()));
   }, [dispatch]);
 
   return (
-    <SafeAreaView>
-      <View style={styles.container}>
-        {users.length ? (
-          <UserList users={users} />
-        ) : (
-          <CenterView testID={LOADING_TEST_ID}>
-            <Text style={styles.loadingText}>Loading...</Text>
-          </CenterView>
-        )}
-      </View>
-    </SafeAreaView>
+    <>
+      <SafeAreaView>
+        <View style={styles.container}>
+          {users.length ? (
+            <UserList users={users} />
+          ) : (
+            <CenterView testID={LOADING_TEST_ID}>
+              <Text style={styles.loadingText}>Loading...</Text>
+            </CenterView>
+          )}
+        </View>
+      </SafeAreaView>
+    </>
   );
 };
